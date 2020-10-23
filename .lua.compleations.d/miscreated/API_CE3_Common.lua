@@ -1,35 +1,34 @@
---- @module CE3_Common
---- Common CE3 API
-
-
 ---* Basic 3D vector value used by g_SignalData.
 ---| data structure passed to the Signals, use this global to avoid temporary lua mem allocation
+---@type vector3
 g_SignalData_point = {x = 0, y = 0, z = 0};
 
 ---* Basic 3D vector value used by g_SignalData.
+---@type vector3
 g_SignalData_point2 = {x = 0, y = 0, z = 0};
 
-
-
 ---* Used for passing signal data in the AI behavior scripts
----@table g_SignalData
--- g_SignalData = {
---     ---Possible 3D vector you need to pass along.
---     point = g_SignalData_point,
---     ---Possible 3D vector you need to pass along.
---     point2 = g_SignalData_point2,
---     ObjectName = '',
---     id = NULL_ENTITY,
---     fValue = 0,
---     iValue = 0,
---     iValue2 = 0,
--- }
+---@see [AI.Signal](https://docs.cryengine.com/display/CEPROG/Signals)
+g_SignalData = {
+    ---@type vector Possible 3D vector you need to pass along.
+    point = g_SignalData_point,
+    ---@type vector Possible 3D vector you need to pass along.
+    point2 = g_SignalData_point2,
+    ObjectName = '',
+    ---@type entityId
+    id = NULL_ENTITY,
+    fValue = 0,
+    iValue = 0,
+    iValue2 = 0,
+}
 
 ---* Commonly used for temporary strings inside Lua functions.
+---@type string
 g_StringTemp1 = '                                            ';
 
 ---* Commonly used by the Physics.RayWorldIntersection function
 ---| within Lua scripts as the last parameter.
+---@type table
 g_HitTable = {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}}
 
 ---* Logs the current system time to console.
@@ -57,7 +56,7 @@ function merge(dst, src, recurse) end
 ---* Used to completly merge 2 tables with all functions of the source table.
 ---@param dst table destination table to merge to.
 ---@param src table source table to get the table information from.
----@param recursive boolean recursive merging of all sub-tables.
+---@param recurse boolean recursive merging of all sub-tables.
 function mergef(dst, src, recursive) end
 
 ---* Used to convert a 3D vector table into a string and returns it as follows: (x: X.XXX y: Y.YYY z: Z.ZZZ)

@@ -1,9 +1,5 @@
----@module Mis_AISM
-
 ---@class AISM
-
----@type AISM
-AISM = {}
+local AISM = {}
 
 ---* spawn a horde at given world pos
 ---@param targetPos vector

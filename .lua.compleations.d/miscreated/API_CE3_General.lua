@@ -1,11 +1,31 @@
---- @module CE3_General
+---@class StringStream
+StringStream = {
+    ---@field buffer string
+    --- This String streams StringBuffer
+    buffer = '',
 
+    ---* Creates a New StringStream
+    ---@return StringStream
+    New = function() end,
 
+    ---* Write a String to this StringStream
+    ---@param str string
+    Write = function(self, str) end,
+
+    WriteLine = function(self, str) end,
+
+    WriteValue = function(self, v) end,
+
+    WriteIndex = function(self, v) end,
+    ---* Delete the Contents of this StringStreams Buffer
+    Reset = function(self) end,
+
+}
 
 ---* Dumps a Table as a String with Limited Recursion
 ---@param myTable table to dump
 ---@param tableName string name of that table
----@param recurse boolean flag defining table handling - true recurses, false ignores them
+---@param recuse boolean flag defining table handling - true recurses, false ignores them
 ---@return nil|string
 function DumpTableAsLuaString(myTable, tableName, recurse) end
 
@@ -70,28 +90,3 @@ function SetValueRecursive(path, value) end
 ---* Print out a value or values
 ---| whatever they are, simulating print
 function out(...) end
-
----@class StringStream
----@field buffer string The StringStream buffer
-
----@type StringStream
-StringStream = {
-    buffer = '',
-}
----* Create a new StringSteam
----@return StringStream
-function StringStream.New() end
---- * Write to this StringStream
----@param str string
-function StringStream:Write(str) end
---- * Write a Whole Line to this StringStream
----@param str string
-function StringStream:WriteLine(str) end
---- * Write a value to this StringStream
----@param v string
-function StringStream:WriteValue(v) end
---- * Write a key to this StringStream
----@param v string
-function StringStream:WriteIndex(v) end
----* Clear this StringStreams Content
-function StringStream:Reset() end

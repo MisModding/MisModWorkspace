@@ -1,8 +1,70 @@
----@module CE3_Math
-
 ---* returns a constant Vector
----@return vector
+---@return vector|vector3
 function ConstVec(v) return v end
+
+---@class g_Vectors
+---* global Vectors table
+g_Vectors = {
+    --- basic zero vector
+    v000 = ConstVec({x = 0, y = 0, z = 0}),
+
+    --- positive z-axis direction vector
+    v001 = ConstVec({x = 0, y = 0, z = 1}),
+
+    --- positive y-axis direction vector
+    v010 = ConstVec({x = 0, y = 1, z = 0}),
+
+    --- positive y and z-axis direction vector
+    v011 = ConstVec({x = 0, y = 1, z = 1}),
+
+    --- positive x-axis direction vector
+    v100 = ConstVec({x = 1, y = 0, z = 0}),
+
+    --- positive x and z-axis direction vector
+    v101 = ConstVec({x = 1, y = 0, z = 1}),
+
+    --- positive x and y-axis direction vector
+    v110 = ConstVec({x = 1, y = 1, z = 0}),
+
+    --- positive x, y and z-axis vector
+    v111 = ConstVec({x = 1, y = 1, z = 1}),
+
+    --- positive z-axis direction vector
+    up = ConstVec({x = 0, y = 0, z = 1}),
+
+    --- negative z-axis direction vector
+    down = ConstVec({x = 0, y = 0, z = -1}),
+    --- temporary zero vector
+    ---@type vector3
+    temp = {x = 0, y = 0, z = 0},
+    --- temporary zero vector, commonly used for passing rgb color values
+    ---@type vector3
+    tempColor = {x = 0, y = 0, z = 0},
+    --- temporary zero vector
+    ---@type vector3
+    temp_v1 = {x = 0, y = 0, z = 0},
+    --- temporary zero vector
+    ---@type vector3
+    temp_v2 = {x = 0, y = 0, z = 0},
+    --- temporary zero vector
+    ---@type vector3
+    temp_v3 = {x = 0, y = 0, z = 0},
+    --- temporary zero vector
+    ---@type vector3
+    temp_v4 = {x = 0, y = 0, z = 0},
+    --- temporary zero vector
+    ---@type vector3
+    temp_v5 = {x = 0, y = 0, z = 0},
+    --- temporary zero vector
+    ---@type vector3
+    temp_v6 = {x = 0, y = 0, z = 0},
+    --- temporary zero vector
+    ---@type vector3
+    vecMathTemp1 = {x = 0, y = 0, z = 0},
+    --- temporary zero vector
+    ---@type vector3
+    vecMathTemp2 = {x = 0, y = 0, z = 0},
+}
 
 --- basic radian to degree conversion value
 g_Rad2Deg = 180 / math.pi;
@@ -16,28 +78,28 @@ g_2Pi = 2 * math.pi;
 g_Pi2 = 0.5 * math.pi;
 
 ---* Returns true if all vector components of the given vector a are null.
----@param a vector
+---@param a vector|vector3
 ---@return boolean
 function IsNullVector(a) end
 
 ---* Returns true if any vector components of the given vector a is not null.
----@param a vector  to check if any of it's components are not null
+---@param a vector|vector3  to check if any of it's components are not null
 ---@return boolean
 function IsNotNullVector(a) end
 
 ---* Returns the squared length of the given vector a.
----@param a vector  to get the squared length from
+---@param a vector3  to get the squared length from
 ---@return number
 function LengthSqVector(a) end
 
 ---* Returns the length of the given vector a.
----@param a vector to get the length from
+---@param a vector3 to get the length from
 ---@return number
 function LengthVector(a) end
 
 ---* Returns the squared distance between vector a and vector b.
----@param a vector
----@param b vector
+---@param a vector3
+---@param b vector3
 ---@return number
 function DistanceSqVectors(a, b) end
 
@@ -48,14 +110,14 @@ function DistanceSqVectors(a, b) end
 function DistanceSqVectors2d(a, b) end
 
 ---* Returns the distance between vector a and vector b.
----@param a vector
----@param b vector
+---@param a vector3
+---@param b vector3
 ---@return number
 function DistanceVectors(a, b) end
 
 ---* Returns the dot product between vector a and vector b.
----@param a vector
----@param b vector
+---@param a vector3
+---@param b vector3
 ---@return number
 function dotproduct3d(a, b) end
 
@@ -68,16 +130,16 @@ function dotproduct2d(a, b) end
 ---* Logs a given vector to console.
 ---| usage `LogVec("Local Actor Position", g_localActor:GetPos())`
 ---@param name string   description name of the vector
----@param v vector
+---@param v vector3
 function LogVec(name, v) end
 
 ---* Sets all vector components of the given vector `dest` to zero.
----@param dest vector to set
+---@param dest vector3 to set
 function ZeroVector(dest) end
 
 ---* Copies the components of the vector src to the vector dest.
----@param dest vector 	destination vector
----@param src vector    source vector
+---@param dest vector3	destination vector
+---@param src vector3   source vector
 function CopyVector(dest, src) end
 
 function SumVectors(a, b) end
@@ -149,70 +211,3 @@ function GetDirection(a, b) end
 function GetAngleBetweenVectors2D(a, b) end
 
 function GetAngleBetweenVectors(a, b) end
-
----@class g_Vectors
----* global Vectors table
-
-
----@type g_Vectors
-g_Vectors = {
-    --- basic zero vector
-    v000 = ConstVec({x = 0, y = 0, z = 0}),
-
-    --- positive z-axis direction vector
-    v001 = ConstVec({x = 0, y = 0, z = 1}),
-
-    --- positive y-axis direction vector
-    v010 = ConstVec({x = 0, y = 1, z = 0}),
-
-    --- positive y and z-axis direction vector
-    v011 = ConstVec({x = 0, y = 1, z = 1}),
-
-    --- positive x-axis direction vector
-    v100 = ConstVec({x = 1, y = 0, z = 0}),
-
-    --- positive x and z-axis direction vector
-    v101 = ConstVec({x = 1, y = 0, z = 1}),
-
-    --- positive x and y-axis direction vector
-    v110 = ConstVec({x = 1, y = 1, z = 0}),
-
-    --- positive x, y and z-axis vector
-    v111 = ConstVec({x = 1, y = 1, z = 1}),
-
-    --- positive z-axis direction vector
-    up = ConstVec({x = 0, y = 0, z = 1}),
-
-    --- negative z-axis direction vector
-    down = ConstVec({x = 0, y = 0, z = -1}),
-    --- temporary zero vector
-    ---@type vector
-    temp = {x = 0, y = 0, z = 0},
-    --- temporary zero vector, commonly used for passing rgb color values
-    ---@type vector
-    tempColor = {x = 0, y = 0, z = 0},
-    --- temporary zero vector
-    ---@type vector
-    temp_v1 = {x = 0, y = 0, z = 0},
-    --- temporary zero vector
-    ---@type vector
-    temp_v2 = {x = 0, y = 0, z = 0},
-    --- temporary zero vector
-    ---@type vector
-    temp_v3 = {x = 0, y = 0, z = 0},
-    --- temporary zero vector
-    ---@type vector
-    temp_v4 = {x = 0, y = 0, z = 0},
-    --- temporary zero vector
-    ---@type vector
-    temp_v5 = {x = 0, y = 0, z = 0},
-    --- temporary zero vector
-    ---@type vector
-    temp_v6 = {x = 0, y = 0, z = 0},
-    --- temporary zero vector
-    ---@type vector
-    vecMathTemp1 = {x = 0, y = 0, z = 0},
-    --- temporary zero vector
-    ---@type vector
-    vecMathTemp2 = {x = 0, y = 0, z = 0},
-}

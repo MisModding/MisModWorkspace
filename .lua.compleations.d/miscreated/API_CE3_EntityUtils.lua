@@ -1,6 +1,3 @@
---- @module CE3_EntityUtils
-
----@alias entity table
 EntityCommon = {TempPhysParams = {mass = 0, density = 0}, TempPhysicsFlags = {flags_mask = 0, flags = 0}, TempSimulationParams = {max_time_step = 0.02}}
 
 ---* Creates a new table that is derived class of parent entity.

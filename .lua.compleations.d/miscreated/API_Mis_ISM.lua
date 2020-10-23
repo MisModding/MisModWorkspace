@@ -1,8 +1,4 @@
---- @module Mis_ISM
-
 ---@class ISM
-
----@type ISM
 local ISM = {}
 
 ---* Give an item to a Player

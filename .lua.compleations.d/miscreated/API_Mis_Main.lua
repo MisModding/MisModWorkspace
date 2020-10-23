@@ -1,4 +1,7 @@
---- @module Mis_Main
+---@alias ChatCommand func(playerId:entityId,command:string)
+---@alias ChatCommands table<string,ChatCommand>
+--- All Registered ChatCommands
+_G['ChatCommands'] = {} ---@type ChatCommands
 
 ---* Global Callback
 ---| EI: At this point all of the common scripts/systems should be loaded
