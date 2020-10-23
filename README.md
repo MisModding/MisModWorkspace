@@ -31,7 +31,7 @@
    - either delete those files or edit them to suit your needs, Pay Attention to the included comments though as they serve to explain
      some core functionality of this Workspace.
 
-5.  Now you can open VSCode and start modding :)
+5.  Now you can open the `code-workspace` file with VSCode and start modding :)
 
 6. once in vscode you may need to install / enable the recommended extensions.
    - ToDo Tree is Found as a new  dropdown in The File Explorer section of VSCode
