@@ -29,6 +29,9 @@
 		"vscode-lua-format.configPath": "../lua-format-style.cfg",
 		// ! Current Lua Runtime - CE3 uses 5.1 DONT CHANGE THIS
 		"Lua.runtime.version": "Lua 5.1",
+		"Lua.color.mode": "Semantic",
+		"Lua.completion.callSnippet": "Replace",
+		"Lua.completion.keywordSnippet": "Both",
 		// Path to Included Lua Libraries
 		// you can add multiple sources, full path or relative path to the Current Workspace!
 		"Lua.workspace.library": {
