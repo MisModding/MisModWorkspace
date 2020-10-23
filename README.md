@@ -32,6 +32,7 @@
      some core functionality of this Workspace.
 
 5.  Now you can open the `code-workspace` file with VSCode and start modding :)
+   - [Recommended] Look out For the TODOS ection on your sidebar for some quick first steps and explanations.
 
 6. once in vscode you may need to install / enable the recommended extensions.
    - ToDo Tree is Found as a new  dropdown in The File Explorer section of VSCode
