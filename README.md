@@ -3,13 +3,6 @@
 > Provides a Workspace for Easy Development of Lua based Mods for [Miscreated](https://miscreatedgame.com)
 
 
-
-[TOC]
-
-
-
-
-
 ### How to Use
 
 ---------
