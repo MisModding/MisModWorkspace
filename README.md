@@ -26,10 +26,16 @@
    - eg:  `{desktop}/MiscreatedMods/MyNewMod/MyNewMod.code-workspace`
    - Note: this is not required but sets the title seen at the top of vscode.
 
-4.  Now you can open VSCode and start modding :)
+4. You will Find a Genric Mod Template in The Included Workspace folder.
+   - this is Just one way you could structure a mod. you free to do so how you like though.
+   - either delete those files or edit them to suit your needs, Pay Attention to the included comments though as they serve to explain
+     some core functionality of this Workspace.
 
+5.  Now you can open VSCode and start modding :)
 
-
+6. once in vscode you may need to install / enable the recommended extensions.
+   - ToDo Tree is Found as a new  dropdown in The File Explorer section of VSCode
+     it will only show by default when there are todos in the workspace you can change this in the main configuration though
 
 
 ### Notes
