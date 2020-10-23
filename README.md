@@ -15,7 +15,7 @@
 
 2. Grab a Copy of this Repository.
 
-   - [Download a Zip](https://github.com/MisModding/MisModWorkspace/archive/master.zip)
+   - [Download a Zip](https://github.com/MisModding/MisModWorkspace/archive/main.zip)
 
    - [Recommended] Clone Via Git. (easier to update)
 
