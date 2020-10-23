@@ -11,7 +11,7 @@
 ]] --
 --- Log a Preformatted Debug Message Originating from this Mod
 ---| message is passed to string.format() along with any extra params
----@see string.format()
+---@see string.format
 ---@param message string    message to log
 function g_MyMod:Debug(message, ...)
     ---@type string
