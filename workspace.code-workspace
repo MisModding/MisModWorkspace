@@ -70,7 +70,7 @@
 			"INFO",
 			"NOTE"
 		],
-		"todo-tree.regex.regex": "((---|--|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])", // Needed for to-do tree to recognise lua (---|--|) DONT CHANGE THIS
+		"todo-tree.regex.regex": "((---|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])", // Needed for to-do tree to recognise lua (---|--|) DONT CHANGE THIS
 		// My Personal Todo Tree Config, Change this how you like
 		"todo-tree.highlights.customHighlight": {
 			"TODO": {
